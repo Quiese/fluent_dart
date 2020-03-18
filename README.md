@@ -40,8 +40,8 @@ class User extends FluntNotifiable {
 
     addNotifications(
       Contract()
-          .HasMinLen(name, 10, 'name', 'Nome deve ter no mínimo 10 caracteres!')
-          .IsNotNullOrEmpty(email, 'email', 'Email deve ser preenchido!'),
+          .hasMinLen(name, 10, 'name', 'Nome deve ter no mínimo 10 caracteres!')
+          .isNotNullOrEmpty(email, 'email', 'Email deve ser preenchido!'),
     );
   }
 }
@@ -56,7 +56,7 @@ void main() {
   var user = User(name: 'Nome');
 
   //show notifications errors
-  user.notifications.forEach((f) => print(f.Message));
+  user.notifications.forEach((f) => print(f.message));
 
   print('\n${user.notifications.length} Erros de validação');
 
@@ -65,7 +65,7 @@ void main() {
     email: 'user@user.com.br',
   );
 
-  user.notifications.forEach((f) => print(f.Message));
+  user.notifications.forEach((f) => print(f.message));
   
   print('${user.notifications.length} Erros de validação');
 }

@@ -38,7 +38,8 @@ class ContractValidations extends FluntNotifiable {
       return this;
     }
 
-    if (value < comparer) addNotifications(FluntNotification(property, message));
+    if (value < comparer)
+      addNotifications(FluntNotification(property, message));
 
     return this;
   }
@@ -69,7 +70,8 @@ class ContractValidations extends FluntNotifiable {
       return this;
     }
 
-    if (value > comparer) addNotifications(FluntNotification(property, message));
+    if (value > comparer)
+      addNotifications(FluntNotification(property, message));
 
     return this;
   }
