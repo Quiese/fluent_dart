@@ -1,10 +1,10 @@
 # fluent_dart
 
-Flunt Dart is based on [Andre Baltieri](https://github.com/andrebaltieri) [Flunt](https://github.com/andrebaltieri/flunt) for use Notifications Pattern with your entities.
+Fluent Dart is based on [Andre Baltieri](https://github.com/andrebaltieri/flunt) Flunt for use Notifications Pattern with your entities.
 
 ## Instalação
 
-Abra o pubspec.yaml do seu Projeto e digite:
+Abra o pubspec.yaml do seu projeto e digite:
 
 ```yaml
 dependencies:
@@ -56,18 +56,18 @@ void main() {
   var user = User(name: 'Nome');
 
   //show notifications errors
-  user.Notifications.forEach((f) => print(f.Message));
+  user.notifications.forEach((f) => print(f.Message));
 
-  print('\n${user.Notifications.length} Erros de validação');
+  print('\n${user.notifications.length} Erros de validação');
 
   user = User(
     name: 'Nome do Usuário',
     email: 'user@user.com.br',
   );
 
-  user.Notifications.forEach((f) => print(f.Message));
+  user.notifications.forEach((f) => print(f.Message));
   
-  print('${user.Notifications.length} Erros de validação');
+  print('${user.notifications.length} Erros de validação');
 }
 ```
 
